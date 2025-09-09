@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block title %}Start Quiz - Privacy Patrol{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+  <h2>Privacy Questionnaire</h2>
+  <p class="lead mt-3">Click start to begin. It takes about 2 minutes.</p>
+  <form method="POST" action="{{ url_for('quiz_start') }}">
+    <button type="submit" class="btn btn-dark btn-lg">Start</button>
+  </form>
+</div>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Anonymization Recommendation{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">🧩 You Should Use: Anonymization</h1>
+  <p class="lead text-center mt-3">This method removes identifiable details before sharing or analysis.</p>
+
+  <hr>
+
+  <p>Why this might be right for you:
+    <ul>
+      <li>You are sharing data externally</li>
+      <li>You need to reduce re-identification risk</li>
+      <li>Your data includes quasi-identifiers (ZIP codes, dates, etc.)</li>
+    </ul>
+  </p>
+
+  <p>Coming soon: details on techniques like k-anonymity, l-diversity, suppression, and generalization.</p>
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/anon.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Technical Summary (PDF)
+    </a>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('legal_recommendation') }}" class="btn btn-primary btn-lg">See Legal Requirements</a>
+  </div>
+</div>
+{% endblock %}

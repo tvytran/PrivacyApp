@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+{% block title %}Legal Requirements for Your Data{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">⚖️ Legal Privacy Obligations</h1>
+  <p class="lead text-center mt-3">Based on your quiz answers, here are the laws most likely to apply to your project:</p>
+
+  <hr>
+
+  {% if "GDPR" in laws %}
+  <h4>🇪🇺 GDPR (General Data Protection Regulation)</h4>
+  <ul>
+    <li>Strongest privacy law for EU citizens</li>
+    <li>Requires legal basis for data, consent, data rights</li>
+    <li>Applies even if your company is outside the EU</li>
+    <li>Fines up to €20M or 4% of global revenue</li>
+  </ul>
+  {% endif %}
+
+  {% if "HIPAA" in laws %}
+  <h4>🇺🇸 HIPAA (Health Insurance Portability and Accountability Act)</h4>
+  <ul>
+    <li>Applies to healthcare providers and vendors in the U.S.</li>
+    <li>Requires safeguards, breach notifications, and data access rights</li>
+    <li>Heavy fines for violations, up to $1.5M/year per category</li>
+  </ul>
+  {% endif %}
+
+  {% if "CCPA/CPRA" in laws %}
+  <h4>🇺🇸 CCPA / CPRA (California Consumer Privacy Act)</h4>
+  <ul>
+    <li>Applies to businesses targeting or serving California residents</li>
+    <li>Gives rights to know, delete, opt-out of sale/sharing</li>
+    <li>Fines up to $7,500 per violation; allows consumer lawsuits</li>
+  </ul>
+  {% endif %}
+
+  {% if "LGPD" in laws %}
+  <h4>🇧🇷 LGPD (Lei Geral de Proteção de Dados)</h4>
+  <ul>
+    <li>Applies to any company processing data of people in Brazil</li>
+    <li>Very similar to GDPR — user rights, legal bases, DPO requirement</li>
+    <li>Fines up to 2% of Brazilian revenue (max R$50M)</li>
+  </ul>
+  {% endif %}
+
+  {% if "General Guidance" in laws %}
+  <h4>📘 General Privacy Guidance</h4>
+  <p>No specific regulation stood out, but you should still follow privacy best practices:</p>
+  <ul>
+    <li>Be transparent about how you use data</li>
+    <li>Minimize what you collect and store</li>
+    <li>Encrypt sensitive information</li>
+    <li>Prepare for data access or deletion requests</li>
+  </ul>
+  {% endif %}
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/legal_frameworks_details.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Legal Framework Summary (PDF)
+    </a>
+  </div>
+  
+
+  <div class="text-center mt-5">
+    <form method="POST" action="{{ url_for('quiz_start') }}">
+      <button type="submit" class="btn btn-dark btn-lg">Restart</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
+

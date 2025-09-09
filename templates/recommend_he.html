@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block title %}Homomorphic Encryption Recommendation{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">🔐 You Should Use: Homomorphic Encryption</h1>
+  <p class="lead text-center mt-3">For computations on encrypted data without ever exposing it.</p>
+
+  <hr>
+
+  <h4>Why this is best for your case:</h4>
+  <ul>
+    <li>Your data is highly sensitive and you don’t trust any external provider to see it unencrypted.</li>
+    <li>You need to run calculations or models on the data, but can’t let it be decrypted during processing.</li>
+    <li>You’re okay with slower performance or doing things offline or in batches if it means better privacy.</li>
+    <li>You may be working with multiple organizations or combining datasets — HE lets you compute safely without sharing raw info.</li>
+  </ul>
+
+  <h4 class="mt-4">What Homomorphic Encryption lets you do:</h4>
+  <ul>
+    <li>Run analysis while data stays encrypted</li>
+    <li>Use untrusted cloud servers without exposing personal data</li>
+    <li>Stay compliant with laws like GDPR or HIPAA</li>
+    <li>Keep healthcare, finance, or ID data fully protected</li>
+  </ul>
+
+  <h4 class="mt-4">Things to Know:</h4>
+  <ul>
+    <li>Slower than other methods — not great for real-time apps</li>
+    <li>Needs strong infrastructure and sometimes specialized cryptographic tools</li>
+    <li>Best when privacy is more important than speed</li>
+  </ul>
+
+  <h4 class="mt-4">Tools & Libraries:</h4>
+  <ul>
+    <li><strong>Microsoft SEAL</strong> — Easy to use for encrypted ML and statistics</li>
+    <li><strong>TFHE</strong> — Good for encrypted search and binary logic</li>
+    <li><strong>OpenFHE / PALISADE</strong> — Full-featured, general-purpose HE frameworks</li>
+    <li><strong>Google FHE Transpiler</strong> — Converts C++ to encrypted computation</li>
+  </ul>
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/homomorphic_details.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Technical Summary (PDF)
+    </a>
+  </div>
+  
+  <div class="text-center mt-5">
+    <a href="{{ url_for('legal_recommendation') }}" class="btn btn-primary btn-lg">See Legal Requirements</a>
+  </div>
+</div>
+{% endblock %}

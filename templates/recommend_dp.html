@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Differential Privacy Recommendation{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">🟣 You Should Use: Differential Privacy</h1>
+  <p class="lead text-center mt-3">This method protects individual data by adding controlled noise to results.</p>
+
+  <hr>
+
+  <p>This recommendation is based on your answers suggesting a need to:
+    <ul>
+      <li>Protect user-level information</li>
+      <li>Maintain useful statistics while preserving privacy</li>
+      <li>Comply with regulations like GDPR or Census protection standards</li>
+    </ul>
+  </p>
+
+  <p>Details coming soon. Please check back for an explanation of how differential privacy works, example use cases, and libraries to use.</p>
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/DP.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Technical Summary (PDF)
+    </a>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('legal_recommendation') }}" class="btn btn-primary btn-lg">See Legal Requirements</a>
+  </div>
+</div>
+{% endblock %}

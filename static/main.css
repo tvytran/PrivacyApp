@@ -1,0 +1,134 @@
+/* General body styling */
+body {
+  font-family: 'Quicksand', 'Segoe UI', sans-serif;
+  background-color: #f8f4e9; /* Cream background */
+  color: #333333;
+}
+
+/* Navigation styling */
+.navbar {
+  background-color: #ffffff !important; /* White navbar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #f0e6e6;
+}
+
+.navbar-brand, .nav-link, .btn-link {
+  color: #333333 !important;
+  font-weight: 500;
+}
+
+.navbar-brand:hover, .nav-link:hover, .btn-link:hover {
+  color: #ffc0cb !important; /* Baby pink on hover */
+}
+
+/* Main content styling */
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+h1 {
+  color: #333333;
+  font-weight: 600;
+  border-bottom: 2px solid #ffd1dc; /* Baby pink border */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.lead {
+  color: #555555;
+  font-weight: 400;
+}
+
+/* Button styling */
+.btn-dark {
+  background-color: #ffd1dc !important; /* Baby pink buttons */
+  border-color: #ffc0cb !important;
+  color: #333333 !important;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px 25px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-dark:hover {
+  background-color: #ffc0cb !important; /* Slightly darker pink on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout for the answer option labels */
+.quiz-option {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* Style for the quiz answer box */
+.quiz-box {
+  padding: 1.5rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effect */
+.quiz-box:hover {
+  background-color: #fdf5f6; /* Very light pink on hover */
+  border-color: #ffd1dc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* When selected (before feedback), make it pink */
+.quiz-option input[type="radio"]:checked + .quiz-box {
+  background-color: #ffd1dc; /* Baby pink */
+  border-color: #ffc0cb;
+  color: #333333;
+}
+
+/* Feedback styling after answer is submitted */
+.quiz-option.correct .quiz-box {
+  background-color: #d4edda !important; /* Light green for correct */
+  border-color: #c3e6cb !important;
+  color: #155724;
+}
+
+.quiz-option.incorrect .quiz-box {
+  background-color: #f8d7da !important; /* Light red for incorrect */
+  border-color: #f5c6cb !important;
+  color: #721c24;
+}
+
+/* Styling for the quiz score section */
+.big-score {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffc0cb; /* Baby pink */
+  margin: 15px 0;
+}
+
+/* Add subtle accent elements */
+.accent-border {
+  border-left: 3px solid #ffd1dc;
+  padding-left: 15px;
+}
+
+/* Professional form styling */
+input, select, textarea {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #ffd1dc;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 209, 220, 0.25);
+}

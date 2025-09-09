@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Cryptographic Techniques Recommendation{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">🔒 You Should Use: Cryptographic Techniques</h1>
+  <p class="lead text-center mt-3">Advanced encryption strategies can help protect access, sharing, and processing.</p>
+
+  <hr>
+
+  <p>This recommendation fits your scenario where:
+    <ul>
+      <li>Multiple parties are involved</li>
+      <li>Secure data sharing is required</li>
+      <li>You want advanced control over who sees what</li>
+    </ul>
+  </p>
+
+  <p>This section will be expanded to include Secure Multi-Party Computation, Attribute-Based Encryption, and other strategies.</p>
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/crypto.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Technical Summary (PDF)
+    </a>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('legal_recommendation') }}" class="btn btn-primary btn-lg">See Legal Requirements</a>
+  </div>
+</div>
+{% endblock %}

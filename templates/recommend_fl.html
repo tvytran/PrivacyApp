@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Federated Learning Recommendation{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+  <h1 class="text-center">🤖 You Should Use: Federated Learning</h1>
+  <p class="lead text-center mt-3">Train models without moving user data to a central location.</p>
+
+  <hr>
+
+  <p>Your answers suggest:
+    <ul>
+      <li>You need machine learning on distributed user data</li>
+      <li>You cannot centralize the data due to trust or regulation</li>
+      <li>You want to reduce the risk of exposing raw datasets</li>
+    </ul>
+  </p>
+
+  <p>This page will soon provide technical details, use cases, and recommended frameworks for federated learning.</p>
+
+  <div class="text-center mt-3">
+    <a href="{{ url_for('static', filename='files/FL.pdf') }}" 
+       class="btn btn-outline-secondary btn-sm" 
+       target="_blank">
+      View Full Technical Summary (PDF)
+    </a>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('legal_recommendation') }}" class="btn btn-primary btn-lg">See Legal Requirements</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block title %}Home - Privacy Patrol{% endblock %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <h1>What Privacy Method Is Best for Your Data?</h1>
+    <div class="accent-border mx-auto mb-4" style="max-width: 100px;"></div>
+    <p class="lead mt-4 mb-5">Answer a few quick questions to get matched with the best privacy-preserving technology and legal guidance.</p>
+
+    <form method="POST" action="{{ url_for('quiz_start') }}">
+        <button type="submit" class="btn btn-dark btn-lg">Begin Assessment</button>
+    </form>
+</div>
+{% endblock %}
