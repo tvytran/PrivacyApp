@@ -2,10 +2,7 @@
   "functions": {
     "api/**/*.py": {
       "runtime": "python3.11",
-      "includeFiles": [
-        "server.py",
-        "templates/**"
-      ]
+      "includeFiles": "{server.py,templates/**}"
     }
   },
   "routes": [
